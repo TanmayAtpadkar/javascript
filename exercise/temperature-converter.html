@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    const celcius = 25;
+    const fahrenheit = 77;
+
+    function convertToFahrenheit(celcius) {
+      let fahrenheit = (celcius * 9 / 5) + 32;
+      return fahrenheit;
+    }
+    convertToFahrenheit(celcius);
+
+    let Fconverted = convertToFahrenheit(celcius);
+    console.log(Fconverted);
+
+
+    function convertToCelcius(fahrenheit) {
+      let celcius = (fahrenheit - 32) * 5 / 9;
+      return celcius;
+    }
+    convertToCelcius(fahrenheit);
+
+    let Cconverted = convertToCelcius(fahrenheit);
+    console.log(Cconverted);
+
+    ////////////////////
+    const degree = 50;
+    const unit = 'F';
+    function convertTemperature(degree, unit) {
+
+      if (unit === 'C') {
+        let result = convertToFahrenheit(degree);
+        return result + 'F';
+      }
+      else if (unit === 'F') {
+        let result = convertToCelcius(degree);
+        return result + 'C';
+      }
+      else {
+        return 'Invalid unit';
+      }
+    }
+    convertTemperature(degree, unit);
+
+    let converted = convertTemperature(degree, unit);
+    console.log(converted);
+
+
+  </script>
+
+</body>
+
+</html>
